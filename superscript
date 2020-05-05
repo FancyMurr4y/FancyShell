@@ -1,0 +1,78 @@
+#!/bin/bash
+
+#FancySec By Murr4y
+
+clear
+echo '---------------------------------------'
+echo -e '\e[1;31m Welcome to FancySec! \e[0m'
+echo '---------------------------------------'
+
+sleep 2
+echo ''
+echo ''
+
+echo '/$$$$$$$$                                      /$$$$$$                      '
+sleep 0.1
+echo '| $$_____/                                     /$$__  $$                    '
+sleep 0.1
+echo '| $$    /$$$$$$  /$$$$$$$   /$$$$$$$ /$$   /$$| $$  \__/  /$$$$$$   /$$$$$$$'
+sleep 0.1
+echo '| $$$$$|____  $$| $$__  $$ /$$_____/| $$  | $$|  $$$$$$  /$$__  $$ /$$_____/'
+sleep 0.1
+echo '| $$__/ /$$$$$$$| $$  \ $$| $$      | $$  | $$ \____  $$| $$$$$$$$| $$      '
+sleep 0.1
+echo '| $$   /$$__  $$| $$  | $$| $$      | $$  | $$ /$$  \ $$| $$_____/| $$      '
+sleep 0.1
+echo '| $$  |  $$$$$$$| $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$/|  $$$$$$$|  $$$$$$$'
+sleep 0.1
+echo '|__/   \_______/|__/  |__/ \_______/ \____  $$ \______/  \_______/ \_______/'
+sleep 0.1
+echo '                                     /$$  | $$                              '
+sleep 0.1
+echo '                                    |  $$$$$$/                              '
+sleep 0.1
+echo '                                     \______/                               '
+
+ 
+sleep 0.5
+
+echo ''
+echo ''
+echo -e '\e[1;31m Are you a Fancy Boy? \e[0m'
+echo -n ''
+read -s boy
+
+#If password is entered correctly
+
+if [ $boy -eq 1337 ] 2>/dev/null
+then
+who >> ~/Documents/granted
+echo ''
+echo -e '\e[32m ------------------------------------- \e[0m'
+echo '          Well done golfer!'
+ echo -e '\e[32m           Access Granted! \e[0m'
+
+sleep 1
+
+echo ''
+read
+
+./shell2
+
+
+#If the password is entered incorrectly 
+
+else echo ''
+who >> ~/Documents/denied
+echo 'Input: '$boy'' >> ~/Documents/denied
+echo '----------------------------------------' >> ~/Documents/denied
+
+    echo '************************************' 
+echo -e '\e[31m       Working class scum! \e[0m'
+echo '************************************'
+echo ''
+
+sudo reboot
+ exit
+fi
+
